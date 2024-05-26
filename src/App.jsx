@@ -1,10 +1,10 @@
 
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './App.css'
-import Header from './components/Header'
-import Home from './components/Home'
-import ListNews from './components/ListNews'
-import Form from './components/Form'
+import Header from './components/Header/Header'
+import Home from './components/Home/Home'
+import ListNews from './components/ListNews/ListNews'
+import Form from './components/Form/Form'
 
 
 const API_URL = 'https://api.nytimes.com/svc/books/v3/lists/best-sellers/history.json?api-key=ODg6YIGnkG7BRGGEg4VEKacGnDIQPAMH'
