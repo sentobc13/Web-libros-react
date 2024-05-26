@@ -5,6 +5,7 @@ import Header from './components/Header/Header'
 import Home from './components/Home/Home'
 import ListNews from './components/ListNews/ListNews'
 import Form from './components/Form/Form'
+import Footer from './components/Footer/Footer'
 
 
 const API_URL = 'https://api.nytimes.com/svc/books/v3/lists/best-sellers/history.json?api-key=ODg6YIGnkG7BRGGEg4VEKacGnDIQPAMH'
@@ -20,6 +21,7 @@ function App() {
           <Route path='/form' element={<Form/>}/>
           <Route path='/list' element={<ListNews/>}/>
         </Routes>
+        <Footer/>
       </BrowserRouter>
     </div>
   )
