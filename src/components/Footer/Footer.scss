@@ -1,0 +1,28 @@
+$footer-bg-color: #333;
+$footer-text-color: white;
+$link-color: #FFD700;
+$link-hover-decoration: underline;
+
+footer {
+  background-color: $footer-bg-color;
+  color: $footer-text-color;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+
+  a {
+    color: $link-color;
+    text-decoration: none;
+    margin: 0 10px;
+
+    &:hover {
+      text-decoration: $link-hover-decoration;
+    }
+  }
+}
