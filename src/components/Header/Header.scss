@@ -1,0 +1,43 @@
+$menu-bg-color: #333;
+$menu-hover-bg-color: #575757;
+$menu-active-bg-color: #4CAF50;
+$link-color: white;
+$padding: 1rem;
+$link-padding: 0.5rem 1rem;
+$border-radius: 5px;
+$transition-duration: 0.3s;
+$z-index: 1000;
+
+.menu {
+  background-color: $menu-bg-color;
+  padding: $padding;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: $z-index;
+
+  a {
+    color: $link-color;
+    text-decoration: none;
+    padding: $link-padding;
+    transition: background-color $transition-duration ease;
+
+    &:hover {
+      background-color: $menu-hover-bg-color;
+      border-radius: $border-radius;
+    }
+
+    &:active {
+      background-color: $menu-active-bg-color;
+      border-radius: $border-radius;
+    }
+  }
+}
+
+body {
+  padding-top: 4rem;
+}
