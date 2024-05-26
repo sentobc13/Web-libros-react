@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 import './Form.css';
 
 const Form = () => {
+    const navigate = useNavigate();
     const initialValues = {
         name: "",
         title: "",
@@ -24,10 +26,10 @@ const Form = () => {
     }
     const handleSubmit = (e) => {
         e.preventDefault()
-        localStorage.setItem('reserva', JSON.stringify(data))
+        localStorage.setItem('form', JSON.stringify(data))
         clearValues();
         setTimeout(() => {
-            navigate("/");
+            navigate("/list");
           }, 1000)
     }
 
@@ -48,7 +50,7 @@ const Form = () => {
             id="title"
             placeholder="Title"
             onChange={handleInputChange}
-            value={data.name} />
+            value={data.title} />
 
         <input
             type="text"
@@ -56,15 +58,15 @@ const Form = () => {
             id="author"
             placeholder="Author"
             onChange={handleInputChange}
-            value={data.name} />
+            value={data.author} />
 
         <input
             type="text"
-            name="Author"
+            name="description"
             id="description"
             placeholder="Description"
             onChange={handleInputChange}
-            value={data.name}
+            value={data.description}
         />
 
         <button type="submit">Send</button>
